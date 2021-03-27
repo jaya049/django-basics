@@ -1,0 +1,44 @@
+{% block content %}
+
+<div class="row mt-5">
+    <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+            <div class="card-header text-center">
+                <h5 class="card-text">Total Orders</h5>
+            </div>
+            <div class="card-body">
+              <p>Number:{{total_order}}</p>
+            </div>
+        </div>
+    </div>
+          <div class="col-sm-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header text-center">
+                    <h5 class="card-text">Order Pending</h5>
+                </div>
+                <div class="card-body">
+                    <p>Number:{{pending}}</p>
+                </div>
+              </div>
+            </div>
+              <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header text-center">
+                        <h5 class="card-text ">Order Delivered</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Number:{{delivered}}</p>
+                    </div>
+                  </div>
+                </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+
+
+    </div>
+</div>
+{%endblock%}
+

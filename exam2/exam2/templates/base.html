@@ -1,0 +1,75 @@
+{% load static %}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      {% block title %}
+      {{ page_title|default:"Untitled Page" }}
+      {% endblock title %}
+    </title>
+    <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css">
+    {% include 'bootstrap.html' %}
+    <style>
+         .nav{
+           height:60px;
+         }
+         .ml{
+           margin-left:900px;
+         }
+    </style>
+  </head>
+  <body>
+    <div class="nav bg-secondary">
+      <div id="logo top_menu" class="textalign-left"><img style="width:40px;height:40px" src="{% static 'logo.png' %}" alt="" class="pl-5"/>
+        <a class="text-white h3 text-decoration-none">Orisys Academy For Skill Development & Research</a></div>
+        <div class="m-3 ml">
+        <a id="" class="text-white h6">Home | Events |Reach Us</a>
+      </div>
+      </div>
+    </div>
+    <div id="">
+    <header id="">
+      <div></div>
+      <div id="topbanner" class="p-5"><img src="{% static 'banner.jpg' %}" alt="" /></div>
+    </header>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body bg-primary">
+            <h5 class="card-title text-white">Django</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-success">Apply</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body bg-primary">
+            <h5 class="card-title text-white">Laravel</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-success">Apply</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <aside id="rightsidebar">
+      <nav id="nav">
+      <ul>
+        <!--<li><a href="#">Add Your Venue</a></li>--->
+      </ul>
+      </nav>
+    </aside>
+    <section id="main">
+      {% block content %}
+      <p>Placeholder text in base template. Replace with page content.</p>
+      {% endblock content %}
+    </section>
+    <footer id="footer">Copyright &copy;
+      <script type="text/JavaScript">
+      document.write(new Date().getFullYear());
+      </script> MyClub
+    </footer>
+    </div>
+  </body>
+</html>
